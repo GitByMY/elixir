@@ -13,7 +13,7 @@ const git = simpleGit({
 const makeCommit = (n) => {
   if (n === 0) {
     // Push changes to the remote repository
-    git.push(["-u", "origin", "master"], (err, result) => {
+    git.push(["-u", "main", "master"], (err, result) => {
       if (err) {
         console.error("Error pushing to remote:", err);
       } else {
