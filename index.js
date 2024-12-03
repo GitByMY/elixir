@@ -5,9 +5,9 @@ const moment = require("moment");
 const random = require("random");
 
 // Change the working directory to where your local repository is located
-const git = simpleGit("./elixir");
-git.addConfig("user.name", "GitByMY");
-git.addConfig("user.email", "my2386@srmist.edu.in");
+const git = simpleGit({
+    baseDir: __dirname, // Automatically use the current directory
+});
 
 
 const makeCommit = (n) => {
